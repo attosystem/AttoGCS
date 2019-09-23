@@ -169,7 +169,7 @@
     <value>기본 튜닝</value>
   </data>
   <data name="ConnectingMavlink" xml:space="preserve">
-    <value>Mavlink 연결 중</value>
+    <value>기체와 연결 중</value>
   </data>
   <data name="InvalidUpdateRate" xml:space="preserve">
     <value>잘못된 업데이트 속도</value>
@@ -199,7 +199,7 @@
     <value>GPS 이상</value>
   </data>
   <data name="GettingParamsD" xml:space="preserve">
-    <value>매개 변수 획득…</value>
+    <value>기체 정보 요청…</value>
   </data>
   <data name="PleaseConnect" xml:space="preserve">
     <value>먼저 연결하세요.</value>
@@ -319,10 +319,10 @@ Mission Planner는 연결되기 전에 2개의 유효한 heartbeat를 기다림.
 하드웨어 서명 관련하여 하드웨어 공급 업체에 문의 하시기 바랍니다.</value>
   </data>
   <data name="MavlinkConnecting" xml:space="preserve">
-    <value>Mavlink 연결…</value>
+    <value>기체와 연결…</value>
   </data>
   <data name="GettingParams" xml:space="preserve">
-    <value>매개 변수 획득</value>
+    <value>기체 정보 수집 중..</value>
   </data>
   <data name="FailedToReadHex" xml:space="preserve">
     <value>Firmware.hex 읽기 실패</value>
@@ -331,7 +331,7 @@ Mission Planner는 연결되기 전에 2개의 유효한 heartbeat를 기다림.
     <value>지금 업데이트</value>
   </data>
   <data name="Gotparam" xml:space="preserve">
-    <value>취득 매개 변수</value>
+    <value>기체 정보 수집 중입니다....</value>
   </data>
   <data name="Failclog" xml:space="preserve">
     <value>로그 생성 실패</value>
@@ -591,5 +591,11 @@ Mission Planner는 연결되기 전에 2개의 유효한 heartbeat를 기다림.
   </data>
   <data name="CantDetectBoardVersion" xml:space="preserve">
     <value>보드 버전 인식 불가. 케이블 연결 확인 바람.</value>
+  </data>
+  <data name="MavlinkSystemID" xml:space="preserve">
+    <value>기체 ID</value>
+  </data>
+  <data name="WpfileFileLoadText" xml:space="preserve">
+    <value>파일명:</value>
   </data>
 </root>

@@ -1235,7 +1235,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting");
         {
             log.InfoFormat("getParamList {0} {1}", sysidcurrent, compidcurrent);
 
-            frmProgressReporter = CreateIProgressReporterDialogue(Strings.GettingParams + " " + sysidcurrent);
+            frmProgressReporter = CreateIProgressReporterDialogue(Strings.GettingParams + " <" + Strings.MavlinkSystemID + ":"+ sysidcurrent + ">" );
 
             frmProgressReporter.DoWork += FrmProgressReporterGetParams;
             frmProgressReporter.UpdateProgressAndStatus(-1, Strings.GettingParamsD);
@@ -1430,7 +1430,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting");
                         //Console.WriteLine(DateTime.Now.Millisecond + " gp3 ");
 
                         if(frmProgressReporter != null)
-                            this.frmProgressReporter.UpdateProgressAndStatus((indexsreceived.Count*100)/param_total,Strings.Gotparam + paramID);
+                            this.frmProgressReporter.UpdateProgressAndStatus((indexsreceived.Count * 100) / param_total, Strings.Gotparam);
 
                         // we hit the last param - lets escape eq total = 176 index = 0-175
                         if (par.param_index == (param_total - 1))

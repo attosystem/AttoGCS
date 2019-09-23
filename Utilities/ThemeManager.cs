@@ -39,6 +39,7 @@ namespace MissionPlanner.Utilities
             /// </summary>
             BurntKermit,
             HighContrast,
+            AttoTheme,
             Test,
             Custom,
         }
@@ -68,6 +69,11 @@ namespace MissionPlanner.Utilities
         public static Color BSVButtonAreaBGColor;
         public static Color UnselectedTextColour;
         public static Color HorizontalPBValueColor;
+
+        // rainnam atto add
+        public static Color TextBoxTextColor = Color.Black;
+        // label에서는 opacity 값을 조절 할수가없다. 
+        // public static Color FlightPlannerMapBGTextColor = Color.FromArgb(0x64, 0x29, 0x39, 0x55);
 
 
         /// <summary>
@@ -109,6 +115,11 @@ namespace MissionPlanner.Utilities
 
                 case Themes.HighContrast:
                     SetHighContrastColours();
+                    ApplyTheme(control, 0);
+                    break;
+
+                case Themes.AttoTheme:
+                    SetAttoThemeColours();
                     ApplyTheme(control, 0);
                     break;
 
@@ -899,6 +910,72 @@ mc:Ignorable=""d""
             Settings.Instance["terminaltheming"] = true.ToString();
         }
 
+        private static void SetAttoThemeColours()
+        {
+            // BGColor = Color.FromArgb(0x26, 0x27, 0x28);                     // This changes the colour of the main menu background
+            // BGColor = Color.FromArgb(0xD6, 0xDB, 0xE9);                     // This changes the colour of the main menu background(atto)
+            BGColor = Color.FromArgb(0x29, 0x39, 0x55);                     // This changes the colour of the main menu background(atto)
+            //ControlBGColor = Color.FromArgb(0xFF, 0xF7, 0x9D);              // This changes the colour of the sub menu backgrounds
+            ControlBGColor = Color.White;                                   // This changes the colour of the sub menu backgrounds(atto)
+            // TextColor = Color.Black;                                        // This changes the colour of text
+            TextColor = Color.White;                                        // This changes the colour of text
+            //BGColorTextBox = Color.FromArgb(0x43, 0x44, 0x45);              // This changes the colour of the background of textboxes
+            BGColorTextBox = Color.White;                                   // This changes the colour of the background of textboxes(atto)
+            
+
+            ButtonTextColor = Color.FromArgb(64, 87, 4);                    // This changes the colour of button text
+            ButBG = Color.FromArgb(148, 193, 31);                           // This changes the colour of button backgrounds (Top)
+            ButBGBot = Color.FromArgb(205, 226, 150);                       // This changes the colour of button backgrounds (Bot)
+            ProgressBarColorTop = Color.FromArgb(102, 139, 26);             // These three variables change the colours of progress bars
+            ProgressBarColorBot = Color.FromArgb(124, 164, 40);
+            ProgressBarOutlineColor = Color.FromArgb(150, 174, 112);
+            BannerColor1 = Color.FromArgb(0x40, 0x57, 0x04);                // These two variables change the colours of banners such as "planner" umder configuration
+            BannerColor2 = Color.FromArgb(0x94, 0xC1, 0x1F);
+            ColorNotEnabled = Color.FromArgb(150, 43, 58, 3);               // This changes the background color of buttons when not enabled
+            ColorMouseOver = Color.FromArgb(73, 43, 58, 3);                 // This changes the background color of buttons when the mouse is hovering over a button
+            ColorMouseDown = Color.FromArgb(73, 43, 58, 3);                 // This changes the background color of buttons when the mouse is clicked down on a button
+            CurrentPPMBackground = Color.Green;                             // This changes the background colour of the current PPM setting in the flight modes tab
+            ZedGraphChartFill = Color.FromArgb(0x1F, 0x1F, 0x20);           // These three variables change the fill colours of Zed Graphs
+            ZedGraphPaneFill = Color.FromArgb(0x37, 0x37, 0x38);
+            ZedGraphLegendFill = Color.FromArgb(0x85, 0x84, 0x83);
+            RTBForeColor = Color.WhiteSmoke;                                // This changes the colour of text in rich text boxes
+            //BSVButtonAreaBGColor = Color.Black;                           // This changes the colour of a backstageview button area
+            BSVButtonAreaBGColor = Color.FromArgb(0x1D, 0x28, 0x3A); ;      // This changes the colour of a backstageview button area) (atto)
+            UnselectedTextColour = Color.WhiteSmoke;                        // This changes the colour of unselected text in a BSV button
+            HorizontalPBValueColor = Color.FromArgb(148, 193, 31);          // This changes the colour of the horizontal progressbar
+
+            // rainnam atto add
+            TextBoxTextColor = Color.Black;
+            // label의 backcolor가 opacity 값을 조절 할수 없다.
+            // FlightPlannerMapBGTextColor = Color.FromArgb(100, Color.Blue); // Color.FromArgb(0x00, 0xFF, 0x00, 0xFF); //Color.FromArgb(0x00, 0x29, 0x39, 0x55);
+
+            if (MainV2.instance != null && MainV2.instance.FlightPlanner != null)
+            {
+                BSE.Windows.Forms.Panel actionPanel = MainV2.instance.FlightPlanner.panelAction;
+                BSE.Windows.Forms.Panel waypointsPanel = MainV2.instance.FlightPlanner.panelWaypoints;
+
+                actionPanel.CustomColors.BorderColor = Color.Black;       //these statements control the colours of the actions panel in the flight planner window
+                actionPanel.CustomColors.CaptionGradientBegin = ButBG;
+                actionPanel.CustomColors.CaptionGradientEnd = ButBGBot;
+                actionPanel.CustomColors.CaptionText = ButtonTextColor;
+                actionPanel.CustomColors.CollapsedCaptionText = ButtonTextColor;
+
+                waypointsPanel.CustomColors.BorderColor = Color.Black;    //these statements control the colours of the Waypoints panel in the flight planner window
+                waypointsPanel.CustomColors.CaptionGradientBegin = ButBG;
+                waypointsPanel.CustomColors.CaptionGradientEnd = ButBGBot;
+                waypointsPanel.CustomColors.CaptionText = ButtonTextColor;
+                waypointsPanel.CustomColors.CollapsedCaptionText = ButtonTextColor;
+            }
+
+            if (MainV2.instance != null)
+            {
+                MainV2.instance.switchicons(new MainV2.attomenuicons()); 
+            }
+
+            MainV2.TerminalTheming = true;
+            Settings.Instance["terminaltheming"] = true.ToString();
+        }
+
         private static void ApplyTheme(Control temp, int level)
         {
             if (level == 0)
@@ -911,10 +988,18 @@ mc:Ignorable=""d""
             {
                 if (ctl.GetType() == typeof(Label))
                 {
+                    //if ((ctl.Tag is string && (string)ctl.Tag == "FlightPlannerMap"))
+                    //{
+                    //    ctl.ForeColor = TextColor;
+                    //    ctl.BackColor = System.Drawing.Color.Transparent;
+                    //    //ctl.BackColor = FlightPlannerMapBGTextColor ;
+                    //} else 
                     if (!(ctl.Tag is string && (string)ctl.Tag == "custom"))
                     {
                         ctl.ForeColor = TextColor;
                     }
+                    
+
                 }
                 else if (ctl.GetType() == typeof(QuickView))
                 {
@@ -989,7 +1074,8 @@ mc:Ignorable=""d""
                 else if (ctl.GetType() == typeof(TextBox))
                 {
                     ctl.BackColor = BGColorTextBox;             //sets the BG colour of text boxes to specified colour
-                    ctl.ForeColor = TextColor;
+                    // ctl.ForeColor = TextColor;
+                    ctl.ForeColor = TextBoxTextColor;          // rainnam atto add 
                     TextBox txt = (TextBox)ctl;
                     txt.BorderStyle = BorderStyle.None;
                 }
@@ -1004,7 +1090,8 @@ mc:Ignorable=""d""
                          ctl.GetType() == typeof(DataTreeListView))
                 {
                     ctl.BackColor = BGColor;
-                    ctl.ForeColor = TextColor;
+                    // ctl.ForeColor = TextColor;
+                    ctl.ForeColor = TextBoxTextColor;          // rainnam atto add 
                 }
                 else if (ctl.GetType() == typeof(ZedGraph.ZedGraphControl))
                 {
@@ -1134,14 +1221,16 @@ mc:Ignorable=""d""
                 else if (ctl.GetType() == typeof (ComboBox) || ctl.GetType() == typeof (MavlinkComboBox))
                 {
                     ctl.BackColor = ControlBGColor;
-                    ctl.ForeColor = TextColor;
+                    // ctl.ForeColor = TextColor;
+                    ctl.ForeColor = TextBoxTextColor;          // rainnam atto add 
                     ComboBox CMB = (ComboBox) ctl;
                     CMB.FlatStyle = FlatStyle.Flat;
                 }
                 else if (ctl.GetType() == typeof (NumericUpDown) || ctl.GetType() == typeof (MavlinkNumericUpDown))
                 {
                     ctl.BackColor = BGColorTextBox;
-                    ctl.ForeColor = TextColor;
+                    // ctl.ForeColor = TextColor;
+                    ctl.ForeColor = TextBoxTextColor;          // rainnam atto add 
                 }
                 else if (ctl.GetType() == typeof (TrackBar))
                 {
@@ -1174,6 +1263,7 @@ mc:Ignorable=""d""
                 {
                     ((HorizontalProgressBar2) ctl).BackgroundColor = ControlBGColor;
                     ((HorizontalProgressBar2) ctl).ValueColor = HorizontalPBValueColor;
+                    ((HorizontalProgressBar2)ctl).ForeColor = TextBoxTextColor;     // atto add 
                 }
                 else if (ctl.GetType() == typeof(MyProgressBar))
                 {

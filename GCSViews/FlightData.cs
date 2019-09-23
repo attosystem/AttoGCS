@@ -352,7 +352,7 @@ namespace MissionPlanner.GCSViews
 
         void mymap_Paint(object sender, PaintEventArgs e)
         {
-            distanceBar1.DoPaintRemote(e);
+            // distanceBar1.DoPaintRemote(e);
         }
 
         internal GMapMarker CurrentGMapMarker;

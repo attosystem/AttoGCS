@@ -102,7 +102,8 @@ namespace MissionPlanner
                 return;
             }
 
-            name = "Mission Planner";
+            //name = "Mission Planner";
+            name = "attoGCS";
 
             try
             {
@@ -157,10 +158,27 @@ namespace MissionPlanner
             if (IconFile != null)
                 Splash.Icon = Icon.FromHandle(((Bitmap)IconFile).GetHicon());
 
+            /*
             string strVersion = File.Exists("version.txt")
                 ? File.ReadAllText("version.txt")
                 : System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
             Splash.Text = name + " " + Application.ProductVersion + " build " + strVersion;
+            */
+
+            /*
+             * version.txt에 내용이 있는 경우는 build 관련 내용을 출력해 주고 
+             * 없는 경우는 무조건 build 문구를 빼도록 한다. 
+             */
+            string strVersion;
+            if (File.Exists("version.txt"))
+            {
+                strVersion = File.ReadAllText("version.txt");
+                Splash.Text = name + " " + Application.ProductVersion + " build " + strVersion;
+            } else
+            {
+                Splash.Text = name + " " + Application.ProductVersion;
+            }
+
             Splash.Show();
 
             if (Debugger.IsAttached)

@@ -256,7 +256,7 @@ namespace MissionPlanner.Utilities
         /// <returns></returns>
         public static string GetUserDataDirectory()
         {
-            var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + Path.DirectorySeparatorChar + "Mission Planner" +
+            var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + Path.DirectorySeparatorChar + "AttoGCS" +
                           Path.DirectorySeparatorChar;
 
             return path;

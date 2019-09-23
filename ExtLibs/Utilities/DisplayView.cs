@@ -14,7 +14,8 @@ namespace MissionPlanner.Utilities
     public enum DisplayNames
     {
         Basic,
-        Advanced
+        Advanced,
+        AttoUserMode
     }
     [Serializable]
     public class DisplayView
@@ -355,6 +356,85 @@ namespace MissionPlanner.Utilities
                 displayBaudCMB = true,
                 displaySerialPortCMB = true,
                 standardFlightModesOnly =  false,
+                autoHideMenuForce = false,
+                isAdvancedMode = true
+            };
+        }
+
+        public static DisplayView AttoUserMode(this DisplayView v)
+        {
+            return new DisplayView()
+            {
+                displayName = DisplayNames.AttoUserMode,
+                //MainV2 buttons
+                displaySimulation = false,
+                displayTerminal = false,
+                displayDonate = false,
+                displayHelp = true,
+
+                //flight Data view
+                displayAnenometer = true,
+                displayQuickTab = true,
+                displayPreFlightTab = true,
+                displayAdvActionsTab = true,
+                displaySimpleActionsTab = false,
+                displayGaugesTab = true,
+                displayStatusTab = true,
+                displayServoTab = true,
+                displayScriptsTab = true,
+                displayTelemetryTab = true,
+                displayDataflashTab = true,
+                displayMessagesTab = true,
+
+                //flight plan
+                displayRallyPointsMenu = true,
+                displayGeoFenceMenu = true,
+                displaySplineCircleAutoWp = true,
+                displayTextAutoWp = true,
+                displayCircleSurveyAutoWp = true,
+                displayPoiMenu = true,
+                displayTrackerHomeMenu = true,
+                displayCheckHeightBox = true,
+                displayPluginAutoWp = true,
+
+                //initial setup
+                displayInstallFirmware = false,
+                displayWizard = true,
+                displayFrameType = true,
+                displayAccelCalibration = true,
+                displayCompassConfiguration = true,
+                displayRadioCalibration = true,
+                displayEscCalibration = false,
+                displayFlightModes = true,
+                displayFailSafe = true,
+                displaySikRadio = true,
+                displayBattMonitor = true,
+                displayCAN = true,
+                displayCompassMotorCalib = false,
+                displayRangeFinder = true,
+                displayAirSpeed = true,
+                displayPx4Flow = true,
+                displayOpticalFlow = true,
+                displayOsd = true,
+                displayCameraGimbal = true,
+                displayMotorTest = false,
+                displayBluetooth = true,
+                displayParachute = true,
+                displayEsp = true,
+                displayAntennaTracker = true,
+
+
+                //config tuning
+                displayBasicTuning = false,
+                displayExtendedTuning = true,
+                displayStandardParams = false,
+                displayAdvancedParams = false,
+                displayFullParamList = false,
+                displayFullParamTree = false,
+                displayParamCommitButton = false,
+                displayBaudCMB = true,
+                displaySerialPortCMB = true,
+                standardFlightModesOnly = false,
                 autoHideMenuForce = false,
                 isAdvancedMode = true
             };

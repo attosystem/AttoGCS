@@ -2702,7 +2702,7 @@ namespace MissionPlanner.GCSViews
                         }
                     }
 
-                    lbl_wpfile.Text = "Loaded " + Path.GetFileName(file);
+                    lbl_wpfile.Text = Strings.WpfileFileLoadText + Path.GetFileName(file);  //"Loaded " + Path.GetFileName(file);  
                 }
             }
         }

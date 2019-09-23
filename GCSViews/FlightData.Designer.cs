@@ -1953,6 +1953,15 @@
             this.splitContainer1.Panel2.Controls.Add(this.lbl_sats);
             this.splitContainer1.Panel2.Controls.Add(this.gMapControl1);
             this.splitContainer1.Panel2.Controls.Add(this.TRK_zoom);
+            this.but_disablejoystick.Visible = false;
+            this.distanceBar1.Visible = false;
+            this.windDir1.Visible = false;
+            this.label6.Visible = false;
+            this.label5.Visible = false ;
+            this.label3.Visible = false;
+            this.label4.Visible = false;
+            this.lbl_hdop.Visible = false;
+            this.lbl_sats.Visible = false;
             // 
             // zg1
             // 
@@ -2218,6 +2227,9 @@
             this.panel1.Controls.Add(this.CB_tuning);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+
+            this.CB_tuning.Visible = false;
+            this.CHK_autopan.Visible = false;
             // 
             // coords1
             // 

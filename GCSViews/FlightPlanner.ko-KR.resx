@@ -187,7 +187,7 @@
     <value>자동 WP</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Long</value>
+    <value> 경         도</value>
   </data>
   <data name="insertSplineWPToolStripMenuItem.Text" xml:space="preserve">
     <value>Spline 목표지점 넣기</value>
@@ -214,7 +214,7 @@
     <value>DO_SET_ROI</value>
   </data>
   <data name="BUT_saveWPFile.Text" xml:space="preserve">
-    <value>WP 파일 저장</value>
+    <value>WP 파일로 저장</value>
   </data>
   <data name="dataGridViewImageColumn1.HeaderText" xml:space="preserve">
     <value>Up</value>
@@ -223,10 +223,10 @@
     <value>Relative</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>Home Location</value>
+    <value>홈 위치</value>
   </data>
   <data name="BUT_loadwpfile.Text" xml:space="preserve">
-    <value>WP 파일 로딩</value>
+    <value>WP 파일에서 읽어오기</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
     <value>로이터 반지름</value>
@@ -238,7 +238,7 @@
     <value>시작</value>
   </data>
   <data name="BUT_read.Text" xml:space="preserve">
-    <value>목표 지점 읽어오기</value>
+    <value>기체로부터 WP 읽어오기</value>
   </data>
   <data name="loadPolygonToolStripMenuItem.Text" xml:space="preserve">
     <value>폴리곤 로딩</value>
@@ -253,7 +253,7 @@
     <value>업로드</value>
   </data>
   <data name="LBL_WPRad.Text" xml:space="preserve">
-    <value>경로 지점 반지름</value>
+    <value>WP 반지름</value>
   </data>
   <data name="zoomToToolStripMenuItem.Text" xml:space="preserve">
     <value>Zoom To</value>
@@ -265,7 +265,7 @@
     <value>명령</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
-    <value>위도</value>
+    <value> 위         도</value>
   </data>
   <data name="lbl_status.Text" xml:space="preserve">
     <value>상태</value>
@@ -334,7 +334,7 @@
     <value>열을 아래로</value>
   </data>
   <data name="BUT_write.Text" xml:space="preserve">
-    <value>경로 지점 쓰기</value>
+    <value>기체에 WP 쓰기</value>
   </data>
   <data name="modifyAltToolStripMenuItem.Text" xml:space="preserve">
     <value>고도 수정</value>
@@ -346,7 +346,7 @@
     <value>Lon</value>
   </data>
   <data name="lbl_wpfile.Text" xml:space="preserve">
-    <value>...</value>
+    <value>파일명:</value>
   </data>
   <data name="polygonToolStripMenuItem.Text" xml:space="preserve">
     <value>폴리곤 그리기</value>
@@ -470,5 +470,8 @@
   </data>
   <data name="Angle.HeaderText" xml:space="preserve">
     <value>Angle</value>
+  </data>
+  <data name="LBL_alt_disp.Text" xml:space="preserve">
+    <value>고도 표시</value>
   </data>
 </root>

@@ -121,13 +121,13 @@
     <value>시뮬레이션</value>
   </data>
   <data name="MenuFlightPlanner.Text" xml:space="preserve">
-    <value>비행 계획</value>
+    <value>자동 비행 </value>
   </data>
   <data name="MenuHelp.Text" xml:space="preserve">
     <value>도움말</value>
   </data>
   <data name="MenuInitConfig.ToolTipText" xml:space="preserve">
-    <value>H/W 구성</value>
+    <value>H/W 설정</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Mission Planner - By Michael Oborne</value>
@@ -136,46 +136,46 @@
     <value>연결 옵션</value>
   </data>
   <data name="MenuTerminal.Text" xml:space="preserve">
-    <value>종단</value>
+    <value>터미널</value>
   </data>
   <data name="MenuDonate.Text" xml:space="preserve">
-    <value>출연</value>
+    <value>기부</value>
   </data>
   <data name="readonlyToolStripMenuItem.Text" xml:space="preserve">
     <value>읽기 전용</value>
   </data>
   <data name="MenuFlightData.Text" xml:space="preserve">
-    <value>비행 데이터</value>
+    <value>메인 화면</value>
   </data>
   <data name="MenuInitConfig.Text" xml:space="preserve">
-    <value>초기 설정</value>
+    <value>H/W 설정</value>
   </data>
   <data name="MenuConnect.Text" xml:space="preserve">
     <value>연결</value>
   </data>
   <data name="MenuFlightPlanner.ToolTipText" xml:space="preserve">
-    <value>Flight Planner</value>
+    <value>자동비행</value>
   </data>
   <data name="MenuConfigTune.Text" xml:space="preserve">
-    <value>구성/튜닝</value>
+    <value>설정/최적화</value>
   </data>
   <data name="MenuFlightData.ToolTipText" xml:space="preserve">
-    <value>비행 데이터</value>
+    <value>메인 화면</value>
   </data>
   <data name="MenuConfigTune.ToolTipText" xml:space="preserve">
-    <value>소프트웨어 구성</value>
+    <value>설정/최적화</value>
   </data>
   <data name="MenuSimulation.Text" xml:space="preserve">
     <value>시뮬레이션</value>
   </data>
   <data name="MenuHelp.ToolTipText" xml:space="preserve">
-    <value>종단</value>
+    <value>도움말</value>
   </data>
   <data name="MainMenu.Text" xml:space="preserve">
     <value>menuStrip1</value>
   </data>
   <data name="MenuTerminal.ToolTipText" xml:space="preserve">
-    <value>종단</value>
+    <value>터미널</value>
   </data>
   <data name="menu.Text" xml:space="preserve">
     <value>메뉴</value>

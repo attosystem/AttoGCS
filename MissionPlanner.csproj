@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <ProjectGuid>{A2E22272-95FE-47B6-B050-9AE7E2055BF5}</ProjectGuid>
-    <ApplicationIcon>mpdesktop.ico</ApplicationIcon>
+    <ApplicationIcon>attoGCS.ico</ApplicationIcon>
     <OutputType>Exe</OutputType>
     <StartupObject>MissionPlanner.Program</StartupObject>
     <Authors>Michael Oborne</Authors>
@@ -4204,6 +4204,16 @@
     <Content Include="ArduCopterConfig.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="attoGCS.ico" />
+    <None Include="Resources\atto_image\atto_gcs_connect_icon.png" />
+    <None Include="Resources\atto_image\atto_gcs_disconnect_icon.png" />
+    <None Include="Resources\atto_image\atto_gcs_help_icon.png" />
+    <None Include="Resources\atto_image\atto_gcs_tuningconfig_icon.png" />
+    <None Include="Resources\atto_image\atto_gcs_initialsetup_icon.png" />
+    <None Include="Resources\atto_image\atto_gcs_flightplan_icon.png" />
+    <None Include="Resources\atto_image\atto_splash.jpg" />
+    <None Include="Resources\atto_image\atto_gcs_flightdata_icon.png" />
+    <None Include="atto_image\atto_menu_bg.jpg" />
     <Content Include="camerasBuiltin.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

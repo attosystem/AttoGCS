@@ -355,7 +355,7 @@
     <value>지도 맞교환</value>
   </data>
   <data name="tabQuick.Text" xml:space="preserve">
-    <value>쾌속</value>
+    <value>모니터링</value>
   </data>
   <data name="BUT_speed5.Text" xml:space="preserve">
     <value>5x</value>
